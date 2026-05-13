@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Путеводитель по Стамбулу — Паромы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Unbounded', sans-serif;
+            background-color: #F5F5F5;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1920px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #F5F5F5;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 60px 0 60px;
+            width: 100%;
+            background-color: #F5F5F5;
+        }
+
+        .logo a {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            color: #000000;
+            text-align: left;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .logo a:hover {
+            opacity: 0.7;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-btn {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: #000000;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px 0;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            opacity: 0.7;
+        }
+
+        .ferry-section {
+            padding: 80px 60px 100px;
+            width: 100%;
+        }
+
+        .ferry-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .ferry-left {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .ferry-image {
+    width: 100%;
+    max-width: 550px;
+    height: 550px;
+    border-radius: 44px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+        .ferry-image:hover {
+            transform: scale(1.02);
+        }
+
+        .ferry-caption {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            font-size: 34px;
+            text-align: center;
+            color: #A62F20;
+            margin-top: 24px;
+        }
+
+        .ferry-right {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .ferry-text {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #5D4037;
+            text-align: left;
+        }
+
+        .ferry-text strong {
+            font-weight: 700;
+            color: #5D4037;
+        }
+
+        .footer {
+            background-color: #F5F5F5;
+            padding: 60px 20px 80px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-title {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-4px);
+        }
+
+        .icon {
+            width: 36px;
+            height: 36px;
+            fill: #A62F20;
+            color: #A62F20;
+        }
+
+        @media (max-width: 1100px) {
+            .header {
+                padding: 30px 30px 0 30px;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .nav-buttons {
+                gap: 20px;
+            }
+            .ferry-section {
+                padding: 60px 30px 80px;
+            }
+            .ferry-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .ferry-text {
+                font-size: 18px;
+                text-align: center;
+            }
+            .ferry-caption {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px 20px 0 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-buttons {
+                justify-content: center;
+                gap: 16px;
+            }
+            .nav-btn {
+                font-size: 12px;
+            }
+            .ferry-section {
+                padding: 40px 20px 60px;
+            }
+            .ferry-caption {
+                font-size: 24px;
+            }
+            .ferry-text {
+                font-size: 16px;
+            }
+            .footer-title {
+                font-size: 20px;
+            }
+            .social-icons {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Путеводитель по Стамбулу</a>
+        </div>
+        <div class="nav-buttons">
+            <a href="attractions.html" class="nav-btn">Достопримечательности</a>
+            <button class="nav-btn">Транспорт</button>
+            <button class="nav-btn">Еда и напитки</button>
+            <button class="nav-btn">События</button>
+            <button class="nav-btn">Практические советы</button>
+        </div>
+    </header>
+
+    <section class="ferry-section">
+        <div class="ferry-content">
+            <div class="ferry-left">
+                <img class="ferry-image" 
+                     src="https://i.pinimg.com/736x/73/09/a4/7309a4cb205a3410d0b996d8aec9b61b.jpg" 
+                     alt="Паром в Стамбуле">
+                <div class="ferry-caption">Паром</div>
+            </div>
+            <div class="ferry-right">
+                <div class="ferry-text">
+                    Паромы очень удобны, на них можно пересечь Босфор, они ходят на острова и в прибрежные пригороды Стамбула.<br><br>
+                    <strong>Паромы вида Feribot</strong> ходят по коротким маршрутам через Босфор,<br><br>
+                    <strong>паромы Vapur</strong> — на Принцевы острова и в границах города,<br><br>
+                    <strong>Deniz otobüsü</strong> — по более длинным маршрутам вдоль Босфора и по Мраморному морю.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-title">Путеводитель по Стамбулу</div>
+        <div class="social-icons">
+            <a href="#" aria-label="Instagram">
+                <svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.976.976 1.248 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.976.976-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.976-.976-1.248-2.242-1.31-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.976-.976 2.242-1.248 3.608-1.31 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.332.014 7.052.072 5.197.154 3.764.5 2.523 1.74 1.282 2.981.936 4.414.854 6.272.796 7.552.782 7.961.782 11.22s.014 3.668.072 4.948c.082 1.858.428 3.291 1.669 4.532 1.241 1.241 2.674 1.587 4.532 1.669 1.28.058 1.689.072 4.948.072s3.668-.014 4.948-.072c1.858-.082 3.291-.428 4.532-1.669 1.241-1.241 1.587-2.674 1.669-4.532.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.082-1.858-.428-3.291-1.669-4.532C20.236.5 18.803.154 16.945.072 15.665.014 15.256 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+                </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+                <svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+            <a href="#" aria-label="Threads">
+                <svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.5 2.5A3.5 3.5 0 0115 6a3.5 3.5 0 11-3.5-3.5A3.5 3.5 0 0115 6zM6.5 8.5A3.5 3.5 0 0110 12a3.5 3.5 0 11-3.5-3.5zM12 14.5a3.5 3.5 0 113.5 3.5 3.5 3.5 0 01-3.5-3.5z" fill="currentColor"/>
+                    <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+</div>  
+</body>
+</html>
